@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -34,6 +35,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import com.example.thirtydaysofhorror.model.HorrorMedia
 import com.example.thirtydaysofhorror.model.HorrorMediaRepository
@@ -60,7 +62,7 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
 
     Card(modifier = modifier.fillMaxWidth()) {
         Column (
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(26.dp).heightIn(64.dp)
         ) {
             Row (
                 verticalAlignment = Alignment.CenterVertically
@@ -88,7 +90,8 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
                     Text(
                         text = stringResource(horrorMedia.titleStringId),
                         style = MaterialTheme.typography.headlineMedium,
-                        textAlign = TextAlign.Center
+                        textAlign = TextAlign.Center,
+                        fontWeight = FontWeight.Black
                     )
 
                     Spacer(modifier = Modifier.size(16.dp))
