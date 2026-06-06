@@ -125,11 +125,11 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
 
 @Composable
 fun HorrorFeed(horrorList: List<HorrorMedia>, modifier: Modifier = Modifier){
-    LazyColumn(modifier = modifier.padding(8.dp)) {
+    LazyColumn(modifier = modifier) {
         items(horrorList) {
             HorrorRecommendationsCard(horrorList.indexOf(it)+1,
                 horrorMedia = it,
-                modifier = Modifier.padding(top=16.dp, bottom = 16.dp)
+                modifier = Modifier.padding(top=8.dp, bottom = 16.dp, start = 16.dp, end = 16.dp)
                 )
         }
     }
@@ -140,6 +140,16 @@ fun HorrorFeed(horrorList: List<HorrorMedia>, modifier: Modifier = Modifier){
 @Composable
 fun DarkThemePreview(){
     ThirtyDaysOfHorrorTheme(darkTheme = true) {
+        Scaffold { innerPadding ->
+            HorrorFeed(horrorList = HorrorMediaRepository.horrorGoodies, modifier = Modifier.padding(innerPadding))
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun LightThemePreview(){
+    ThirtyDaysOfHorrorTheme(darkTheme = false) {
         Scaffold { innerPadding ->
             HorrorFeed(horrorList = HorrorMediaRepository.horrorGoodies, modifier = Modifier.padding(innerPadding))
         }
