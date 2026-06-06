@@ -1,6 +1,9 @@
 package com.example.thirtydaysofhorror
 
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -77,6 +80,12 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
                 .heightIn(64.dp)
                 .fillMaxWidth()
                 .background(color = color)
+                .animateContentSize(
+                    animationSpec = spring(
+                        dampingRatio = Spring.DampingRatioLowBouncy,
+                        stiffness = Spring.StiffnessMedium
+                    )
+                )
         ) {
             Row (
                 verticalAlignment = Alignment.CenterVertically,
