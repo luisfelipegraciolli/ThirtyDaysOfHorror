@@ -65,5 +65,14 @@ fun TDOHTopBar(modifier: Modifier = Modifier){
 @Preview(showBackground = true)
 @Composable
 fun AppPreview() {
-    App()
+
+    ThirtyDaysOfHorrorTheme(darkTheme = true){
+        Scaffold(topBar = { TDOHTopBar() },
+            modifier = Modifier.fillMaxSize()) { innerPadding ->
+            HorrorFeed(
+                horrorList = HorrorMediaRepository.horrorGoodies,
+                modifier = Modifier.padding(innerPadding)
+            )
+        }
+    }
 }

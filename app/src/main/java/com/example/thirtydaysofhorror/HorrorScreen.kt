@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.getValue
@@ -74,7 +75,9 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
         }
     )
 
-    Card(modifier = modifier) {
+    Card(elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+        ,modifier = modifier
+    ) {
         Column (
             modifier = Modifier
                 .heightIn(64.dp)
