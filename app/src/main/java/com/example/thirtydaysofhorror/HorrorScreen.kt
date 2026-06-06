@@ -22,8 +22,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
@@ -33,20 +38,23 @@ import com.example.thirtydaysofhorror.ui.theme.ThirtyDaysOfHorrorTheme
 
 
 @Composable
-private fun MediaItemButton(expandend: Boolean, modifier: Modifier = Modifier){
+private fun MediaItemButton(expandend: Boolean, onClick: () -> (Unit), modifier: Modifier = Modifier){
     IconButton(
-        onClick = {  },
-
+        onClick = onClick,
+        modifier = modifier
         ) {
         Icon(
-            imageVector = Icons.Filled.ExpandLess,
+            imageVector = if(expandend) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
             contentDescription = null
         )
     }
+    
 }
 
 @Composable
 fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modifier = Modifier){
+    var expanded by remember { mutableStateOf(false) }
+
     Card(modifier = modifier.fillMaxWidth()) {
         Column (
             modifier = Modifier.padding(16.dp)
@@ -61,40 +69,47 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
                     style = MaterialTheme.typography.headlineSmall
                 )
                 MediaItemButton(
-                    expandend = false,
-                    modifier = Modifier.clip(shape = RoundedCornerShape(16.dp))
+                    expandend = expanded,
+                    modifier = Modifier.clip(shape = RoundedCornerShape(16.dp)),
+                    onClick = {
+                        expanded = !expanded
+                    }
                 )
             }
-            Spacer(modifier = Modifier.size(8.dp))
-            Column (
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(
-                    text = stringResource(horrorMedia.titleStringId),
-                    style = MaterialTheme.typography.headlineMedium
+
+            if (expanded){
+                Spacer(modifier = Modifier.size(8.dp))
+                Column (
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(
+                        text = stringResource(horrorMedia.titleStringId),
+                        style = MaterialTheme.typography.headlineMedium
                     )
 
-                Spacer(modifier = Modifier.size(16.dp))
+                    Spacer(modifier = Modifier.size(16.dp))
 
-                Box(
-                    modifier = Modifier
-                        .size(256.dp)
-                        .clip(MaterialTheme.shapes.small)
-                ) {
-                    Image(
-                        painter = painterResource(horrorMedia.imageResId),
-                        contentDescription = null,
-                        contentScale = ContentScale.Crop
+                    Box(
+                        modifier = Modifier
+                            .size(256.dp)
+                            .clip(MaterialTheme.shapes.small)
+                    ) {
+                        Image(
+                            painter = painterResource(horrorMedia.imageResId),
+                            contentDescription = null,
+                            contentScale = ContentScale.Crop
+                        )
+                    }
+                    Spacer(modifier = Modifier.size(16.dp))
+                    Text(
+                        text = stringResource(horrorMedia.descriptionStringId),
+                        style = MaterialTheme.typography.bodyMedium,
+                        textAlign = TextAlign.Justify
                     )
                 }
-                Spacer(modifier = Modifier.size(16.dp))
-                Text(
-                    text = stringResource(horrorMedia.descriptionStringId),
-                    style = MaterialTheme.typography.bodyMedium,
-                    textAlign = TextAlign.Justify
-                )
             }
+
 
         }
     }
