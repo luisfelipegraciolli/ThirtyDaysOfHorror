@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -42,13 +41,13 @@ import com.example.thirtydaysofhorror.ui.theme.ThirtyDaysOfHorrorTheme
 
 
 @Composable
-private fun MediaItemButton(expandend: Boolean, onClick: () -> (Unit), modifier: Modifier = Modifier){
+private fun MediaItemButton(expanded: Boolean, onClick: () -> (Unit), modifier: Modifier = Modifier){
     IconButton(
         onClick = onClick,
         modifier = modifier
         ) {
         Icon(
-            imageVector = if(expandend) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
+            imageVector = if(expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
             contentDescription = null
         )
     }
@@ -72,7 +71,7 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
                     style = MaterialTheme.typography.headlineSmall
                 )
                 MediaItemButton(
-                    expandend = expanded,
+                    expanded = expanded,
                     modifier = Modifier.clip(shape = RoundedCornerShape(16.dp)),
                     onClick = {
                         expanded = !expanded
