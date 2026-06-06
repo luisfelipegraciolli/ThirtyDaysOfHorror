@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -23,13 +22,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ExpandLess
-import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.style.TextAlign
 import com.example.thirtydaysofhorror.model.HorrorMedia
 import com.example.thirtydaysofhorror.model.HorrorMediaRepository
 import com.example.thirtydaysofhorror.ui.theme.ThirtyDaysOfHorrorTheme
+
 
 @Composable
 private fun MediaItemButton(expandend: Boolean, modifier: Modifier = Modifier){
@@ -56,18 +57,23 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
             ) {
                 Text(
                     text = "Day $day",
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f),
+                    style = MaterialTheme.typography.headlineSmall
                 )
                 MediaItemButton(
                     expandend = false,
                     modifier = Modifier.clip(shape = RoundedCornerShape(16.dp))
                 )
             }
+            Spacer(modifier = Modifier.size(8.dp))
             Column (
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text(text = stringResource(horrorMedia.titleStringId))
+                Text(
+                    text = stringResource(horrorMedia.titleStringId),
+                    style = MaterialTheme.typography.headlineMedium
+                    )
 
                 Spacer(modifier = Modifier.size(16.dp))
 
@@ -85,7 +91,8 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
                 Spacer(modifier = Modifier.size(16.dp))
                 Text(
                     text = stringResource(horrorMedia.descriptionStringId),
-                    style = MaterialTheme.typography.bodySmall
+                    style = MaterialTheme.typography.bodyMedium,
+                    textAlign = TextAlign.Justify
                 )
             }
 
@@ -96,7 +103,9 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
 @Preview(showBackground = true)
 @Composable
 fun DarkThemePreview(){
-    ThirtyDaysOfHorrorTheme() {
-        HorrorRecommendationsCard(1, HorrorMediaRepository.horrorGoodies[0])
+    ThirtyDaysOfHorrorTheme(darkTheme = true) {
+        Scaffold {
+            HorrorRecommendationsCard(1, HorrorMediaRepository.horrorGoodies[0], modifier = Modifier.padding(it))
+        }
     }
 }
