@@ -1,6 +1,8 @@
 package com.example.thirtydaysofhorror
 
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -34,6 +36,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -50,7 +53,8 @@ private fun MediaItemButton(expanded: Boolean, onClick: () -> (Unit), modifier: 
         ) {
         Icon(
             imageVector = if(expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
-            contentDescription = null
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.secondary
         )
     }
     
@@ -58,19 +62,30 @@ private fun MediaItemButton(expanded: Boolean, onClick: () -> (Unit), modifier: 
 
 @Composable
 fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modifier = Modifier){
-    var expanded by remember { mutableStateOf(false) }
+    var expanded: Boolean by remember { mutableStateOf(false) }
+    val color: Color by animateColorAsState(targetValue =
+        if (expanded) {
+            MaterialTheme.colorScheme.surfaceContainerHigh
+        } else{
+            MaterialTheme.colorScheme.surfaceContainerLow
+        }
+    )
 
-    Card(modifier = modifier.fillMaxWidth()) {
+    Card(modifier = modifier) {
         Column (
-            modifier = Modifier.padding(26.dp).heightIn(64.dp)
+            modifier = Modifier
+                .heightIn(64.dp)
+                .fillMaxWidth()
+                .background(color = color)
         ) {
             Row (
-                verticalAlignment = Alignment.CenterVertically
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(16.dp)
             ) {
                 Text(
                     text = "Day $day",
                     modifier = Modifier.weight(1f),
-                    style = MaterialTheme.typography.headlineSmall
+                    style = MaterialTheme.typography.headlineSmall,
                 )
                 MediaItemButton(
                     expanded = expanded,
@@ -85,7 +100,7 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
                 Spacer(modifier = Modifier.size(8.dp))
                 Column (
                     horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth().padding(16.dp)
                 ) {
                     Text(
                         text = stringResource(horrorMedia.titleStringId),
