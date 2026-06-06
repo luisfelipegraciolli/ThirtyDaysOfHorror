@@ -5,9 +5,13 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
@@ -60,8 +64,7 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
             modifier = Modifier.padding(16.dp)
         ) {
             Row (
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.fillMaxWidth()
+                verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
                     text = "Day $day",
@@ -85,7 +88,8 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
                 ) {
                     Text(
                         text = stringResource(horrorMedia.titleStringId),
-                        style = MaterialTheme.typography.headlineMedium
+                        style = MaterialTheme.typography.headlineMedium,
+                        textAlign = TextAlign.Center
                     )
 
                     Spacer(modifier = Modifier.size(16.dp))
@@ -98,7 +102,8 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
                         Image(
                             painter = painterResource(horrorMedia.imageResId),
                             contentDescription = null,
-                            contentScale = ContentScale.Crop
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier.fillMaxSize()
                         )
                     }
                     Spacer(modifier = Modifier.size(16.dp))
@@ -115,12 +120,26 @@ fun HorrorRecommendationsCard(day: Int, horrorMedia: HorrorMedia, modifier: Modi
     }
 }
 
+
+@Composable
+fun HorrorFeed(horrorList: List<HorrorMedia>, modifier: Modifier = Modifier){
+    LazyColumn(modifier = modifier.padding(8.dp)) {
+        items(horrorList) {
+            HorrorRecommendationsCard(horrorList.indexOf(it)+1,
+                horrorMedia = it,
+                modifier = Modifier.padding(top=16.dp, bottom = 16.dp)
+                )
+        }
+    }
+}
+
+
 @Preview(showBackground = true)
 @Composable
 fun DarkThemePreview(){
     ThirtyDaysOfHorrorTheme(darkTheme = true) {
-        Scaffold {
-            HorrorRecommendationsCard(1, HorrorMediaRepository.horrorGoodies[0], modifier = Modifier.padding(it))
+        Scaffold { innerPadding ->
+            HorrorFeed(horrorList = HorrorMediaRepository.horrorGoodies, modifier = Modifier.padding(innerPadding))
         }
     }
 }

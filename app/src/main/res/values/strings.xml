@@ -1,8 +1,120 @@
 <resources>
     <string name="app_name">ThirtyDaysOfHorror</string>
 
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!--                   MOVIES                    -->
+        <!-- ═══════════════════════════════════════════ -->
+
     <string name="horror_media1_title">Hereditary</string>
-    <string name="horror_media1_description">A grieving family is haunted by tragic and disturbing occurrences.
-When Ellen, the matriarch of the Graham family, passes away, her daughter\'s family begins to unravel cryptic and increasingly terrifying secrets about their ancestry. The more they discover, the more they find themselves trying to outrun the sinister fate they seem to have inherited. Making his feature debut, writer-director Ari Aster unleashes a nightmare vision of a domestic breakdown that exhibits the craft and precision of a nascent auteur, transforming a familial tragedy into something ominous and deeply disquieting, and pushing the horror movie into chilling new terrain with its shattering portrait of heritage gone to hell.</string>
+    <string name="horror_media1_description">Occult Horror | After the death of their reclusive grandmother, the Graham family begins unraveling dark and cryptic secrets about their ancestry. Grief curdles into paranoia as strange, violent occurrences tear the household apart. Writer-director Ari Aster transforms a portrait of familial trauma into something deeply malevolent, building toward a conclusion that reveals the full, terrifying scope of a legacy the family never had the chance to escape.</string>
+
+    <string name="horror_media2_title">The Shining</string>
+    <string name="horror_media2_description">Psychological Horror | Struggling writer Jack Torrance moves his wife Wendy and young son Danny into the snowbound Overlook Hotel to serve as its off-season caretaker. As winter isolation sets in, the hotel\'s malevolent history begins to exploit Jack\'s inner demons, driving him toward madness. Meanwhile, Danny\'s psychic gift — his "shine" — forces him to witness horrors no child should ever see. Kubrick\'s adaptation of Stephen King\'s novel remains one of cinema\'s most meticulous and unsettling explorations of a mind coming apart.</string>
+
+    <string name="horror_media3_title">Midsommar</string>
+    <string name="horror_media3_description">Folk Horror | Following a devastating family tragedy, Dani travels to rural Sweden with her emotionally distant boyfriend and his friends to attend a midsummer festival held once every 90 years. What begins as a picturesque cultural retreat slowly reveals itself to be something ancient, communal, and bloodthirsty. Ari Aster crafts a breakup film disguised as folk horror, drowning its dread in perpetual sunlight and flowers while the rituals grow more disturbing with every passing hour.</string>
+
+    <string name="horror_media4_title">Get Out</string>
+    <string name="horror_media4_description">Social Horror | When Chris Washington visits his white girlfriend\'s wealthy family estate for the first time, he senses something deeply wrong beneath their polished, progressive warmth. The Black guests and staff behave strangely, the smiles feel rehearsed, and the compliments carry an unsettling hunger. What begins as racial discomfort escalates into a conspiracy more horrifying than anything Chris could have anticipated. Jordan Peele\'s Oscar-winning directorial debut weaponizes social anxiety into one of the sharpest horror films of the modern era.</string>
+
+    <string name="horror_media5_title">The Conjuring</string>
+    <string name="horror_media5_description">Paranormal Horror | Based on one of Ed and Lorraine Warren\'s most harrowing documented cases, the film follows the real-life paranormal investigators as they are called to help the Perron family, who are being terrorized by a hostile presence in their remote Rhode Island farmhouse. As the disturbances escalate, the Warrens uncover a dark and violent history buried beneath the property. James Wan\'s masterfully crafted haunted-house film revitalized the genre with atmosphere, restraint, and genuine dread.</string>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--                VIDEO GAMES                  -->
+    <!-- ═══════════════════════════════════════════ -->
+
+    <string name="horror_media6_title">Silent Hill 2</string>
+    <string name="horror_media6_description">Psychological Survival Horror | James Sunderland travels to the fog-drenched town of Silent Hill after receiving a letter from his wife — who has been dead for three years. The monsters he encounters throughout the decaying streets and buildings are not random creatures; they are physical manifestations of his own guilt, repression, and shame. Widely regarded as one of the greatest horror games ever made, Silent Hill 2 uses its supernatural setting as a vehicle for an intimate and devastating story about grief, denial, and the terrible things we hide from ourselves.</string>
+
+    <string name="horror_media7_title">Resident Evil 2</string>
+    <string name="horror_media7_description">Survival Horror | Rookie police officer Leon S. Kennedy and college student Claire Redfield arrive in Raccoon City on the same night, only to find the streets overrun by the undead. A virus developed by the shadowy Umbrella Corporation has consumed the population, and the two must fight through a nightmare of zombies, mutants, and relentless biological horrors to find a way out. Both the 1998 original and its acclaimed 2019 remake stand as genre-defining achievements in survival horror, balancing resource management, atmosphere, and terror in near-perfect measure.</string>
+
+    <string name="horror_media8_title">Amnesia: The Dark Descent</string>
+    <string name="horror_media8_description">Survival Horror | Daniel awakens alone in a crumbling 19th-century Prussian castle with no memory of who he is or how he arrived. Armed with nothing but a lantern and a desperate need to understand his past, he must navigate flooded dungeons and collapsing corridors while something relentless hunts him through the dark. Frictional Games\' landmark title stripped survival horror down to its most primal form — no weapons, no combat, only hiding and running — and in doing so launched a new generation of fear-based game design.</string>
+
+    <string name="horror_media9_title">Outlast</string>
+    <string name="horror_media9_description">Survival Horror | Freelance investigative journalist Miles Upshur breaks into the remote Mount Massive Asylum after receiving an anonymous tip about unethical experiments being conducted inside. Armed with nothing but a camcorder and a finite supply of batteries, he discovers the facility overrun by violent patients who have been pushed far beyond the breaking point — and something far worse lurking in the depths below. Outlast redefined first-person horror by removing any form of combat and forcing the player to run, hide, and survive on instinct alone.</string>
+
+    <string name="horror_media10_title">SOMA</string>
+    <string name="horror_media10_description">Sci-Fi Horror | Simon Jarrett wakes inside PATHOS-II, a flooded deep-sea research station, in the year 2104 with no memory of how he got there. As he navigates the ruins of the facility, encountering machines that believe they are human and learning what became of the world above, SOMA confronts him with profoundly unsettling questions about consciousness, identity, and what truly constitutes a person. Frictional Games\' philosophical underwater nightmare is as intellectually disturbing as it is viscerally terrifying.</string>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--               YOUTUBE ARGs                  -->
+    <!-- ═══════════════════════════════════════════ -->
+
+    <string name="horror_media11_title">Marble Hornets</string>
+    <string name="horror_media11_description">Found Footage Horror | After a friend named Alex goes missing during the production of a student film, Jay begins reviewing the abandoned video tapes Alex left behind. What he finds is disturbing footage of a tall, faceless entity watching from the treeline — and evidence that Alex was being followed long before the disappearance. Running from 2009 to 2014 across nearly 90 entries, Marble Hornets pioneered the YouTube ARG format and brought the Slender Man mythos to its definitive found-footage form, blurring the line between fiction and documentation with unsettling precision.</string>
+
+    <string name="horror_media12_title">Local58</string>
+    <string name="horror_media12_description">Analog Horror | A collection of corrupted, degraded broadcasts from a fictional local television station hint at an invisible existential catastrophe quietly unfolding in the background of ordinary life. Emergency alerts give contradictory instructions. Public service announcements take on sinister new meanings. The moon behaves in ways it should not. Creator Kris Straub\'s series is a masterpiece of implication and restraint, building its horror entirely from what is suggested rather than shown, and turning the most familiar broadcast formats into instruments of profound dread.</string>
+
+    <string name="horror_media13_title">Gemini Home Entertainment</string>
+    <string name="horror_media13_description">Analog Horror | A series of warped, deteriorating VHS home videos document an alternate version of Earth being silently consumed by incomprehensible biological entities. Nature documentaries, children\'s programming, and home recordings are all infected by the same wrongness — creatures that move like they were never meant to exist, landscapes that breathe. Creator Remy Abode crafts analog horror that feels genuinely discovered rather than produced, turning consumer nostalgia into a slow and creeping apocalypse.</string>
+
+    <string name="horror_media14_title">The Walten Files</string>
+    <string name="horror_media14_description">Analog Horror | Corporate training tapes, home videos, and internal recordings from Bon\'s Burgers — a 1970s family restaurant chain featuring animatronic animal performers — gradually unravel a devastating cover-up involving missing employees, traumatized children, and machines that have become haunted by those who disappeared inside them. Creator Martin Walls delivers one of the most emotionally resonant entries in the analog horror genre, balancing genuine grief and tragedy beneath its layers of distortion and corporate horror.</string>
+
+    <string name="horror_media15_title">Petscop</string>
+    <string name="horror_media15_description">Mystery Horror | A player named Paul uploads footage of himself exploring Petscop, an unreleased PS1 game he received as a gift. What begins as a cheerful collect-a-thon becomes something else entirely when a hidden note unlocks a second layer of the game — a dark, empty space that seems to be documenting a real child\'s suffering. Over the course of the series, Petscop constructs a deeply disturbing mystery about identity, cyclical trauma, and the ways in which grief and abuse repeat themselves across generations.</string>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--               BOOKS & NOVELS                -->
+    <!-- ═══════════════════════════════════════════ -->
+
+    <string name="horror_media16_title">House of Leaves</string>
+    <string name="horror_media16_description">Metafictional Horror | A young family discovers that their house is measurably larger on the inside than the outside — a spatial impossibility that spirals into something catastrophic. Their story is documented in an obsessive academic manuscript, itself discovered and annotated by a young man who begins losing his grip on sanity as he reads it. Mark Z. Danielewski\'s debut novel uses fragmented footnotes, unconventional typography, and competing narratives to make the reader feel the disorientation of the impossible space it describes — a book that physically unsettles as much as it disturbs.</string>
+
+    <string name="horror_media17_title">The Haunting of Hill House</string>
+    <string name="horror_media17_description">Gothic Horror | Four individuals gather at the notorious Hill House to study the paranormal under the guidance of Dr. John Montague — a researcher seeking empirical proof of the supernatural. But the house seems to have its own intentions, and one member of the group, the anxious and lonely Eleanor, begins to feel it speaking to her in ways the others cannot hear. Shirley Jackson\'s 1959 masterwork is widely considered the finest haunted-house novel ever written, less concerned with ghosts than with the terror of a fragile mind finding something that feels, for the first time, like belonging.</string>
+
+    <string name="horror_media18_title">It</string>
+    <string name="horror_media18_description">Supernatural Horror | In the town of Derry, Maine, seven outcast children discover they share a common enemy: a shapeshifting entity of immeasurable age that surfaces every 27 years to feed on the fear and flesh of the town\'s children — most often wearing the face of Pennywise the Dancing Clown. As adults, they are called back to face it once more. Stephen King\'s sprawling 1986 novel operates simultaneously as a mythological monster story and an intimate portrait of childhood friendship, trauma, memory, and the terrible cost of growing up.</string>
+
+    <string name="horror_media19_title">Tender is the Flesh</string>
+    <string name="horror_media19_description">Dystopian Horror | After a virus renders all animal protein toxic to humans, governments across the world quietly legalize the farming, slaughter, and consumption of human beings — rebranded as "special meat" to distance the industry from its reality. Marcos, a slaughterhouse worker, navigates this new normal with clinical detachment until he is given a female specimen as a gift. Agustina Bazterrica\'s devastating Argentinian novel is a cold, precise, and deeply unsettling satire of complicity, industrialized cruelty, and humanity\'s extraordinary capacity to normalize the unthinkable.</string>
+
+    <string name="horror_media20_title">Mexican Gothic</string>
+    <string name="horror_media20_description">Gothic Horror | In 1950s Mexico City, glamorous socialite Noemí Taboada receives a distressing letter from her cousin Catalina, recently married into the wealthy Doyle family and now living in their crumbling English manor in the countryside. Sent to investigate, Noemí finds the house suffocating, its inhabitants deeply strange, and her cousin deteriorating in ways no doctor can explain. Silvia Moreno-Garcia\'s lush and atmospheric novel peels back the manor\'s rot to reveal a eugenicist legacy that the house — and its fungus — seems determined to perpetuate.</string>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--                 TV SERIES                   -->
+    <!-- ═══════════════════════════════════════════ -->
+
+    <string name="horror_media21_title">The Haunting of Hill House</string>
+    <string name="horror_media21_description">Supernatural Drama | The five Crain siblings were shaped irrevocably by the summer their family spent renovating Hill House — a place that left each of them with wounds they spent decades trying to ignore. When a death forces them back together as adults, the ghosts they fled begin to resurface, and the house\'s hold on their family becomes impossible to deny. Mike Flanagan\'s Netflix series uses the haunted-house framework as a vehicle for a profound meditation on grief, addiction, and the way childhood trauma echoes through an entire lifetime.</string>
+
+    <string name="horror_media22_title">Twin Peaks</string>
+    <string name="horror_media22_description">Surrealist Mystery | FBI Special Agent Dale Cooper arrives in the idiosyncratic Pacific Northwest logging town of Twin Peaks to investigate the murder of beloved homecoming queen Laura Palmer. The town\'s eccentric, coffee-obsessed charm conceals a darkness that runs far deeper than a single homicide — a darkness that exists beyond the rational and bleeds into the dreamlike and the demonic. David Lynch and Mark Frost\'s landmark series dissolved the boundaries between soap opera, detective noir, and supernatural horror in ways that television has never fully recovered from.</string>
+
+    <string name="horror_media23_title">Channel Zero</string>
+    <string name="horror_media23_description">Anthology Horror | Each season of Channel Zero adapts a beloved internet creepypasta into a visually inventive, slow-burn horror miniseries — including Candle Cove, NoEnd House, Butcher\'s Block, and The Dream Door. Creator Nick Antosca treats his source material with reverence and ambition, delivering some of the most genuinely strange and unsettling imagery in American horror television. Where most anthology horror relies on shock, Channel Zero builds its dread through surrealism, atmosphere, and the deeply wrong feeling that something has been off from the very first frame.</string>
+
+    <string name="horror_media24_title">Midnight Mass</string>
+    <string name="horror_media24_description">Religious Horror | A charismatic and passionate young priest returns to the isolated island community of Crockett Island, bringing with him a renewed and fervent faith — and what the dwindling congregation comes to believe are genuine miracles. As the church fills again and the sick recover, a darkness arrives with the blessings. Mike Flanagan\'s most personal series is equal parts theological debate and vampire horror, interrogating faith, addiction, and the seductive comfort of belief in something larger than oneself, while something ancient feeds on the community\'s devotion from within.</string>
+
+    <string name="horror_media25_title">The Terror</string>
+    <string name="horror_media25_description">Historical Horror | Inspired by the doomed real-life 1845 Franklin Expedition, AMC\'s series follows two Royal Navy ships — HMS Erebus and HMS Terror — as they become catastrophically trapped in Arctic sea ice during their search for the Northwest Passage. As months stretch into years, the crew is battered by scurvy, lead poisoning, mutiny, and the slow collapse of command and morale. Beneath the historical survival nightmare stalks something else entirely: a massive, intelligent predator from Inuit legend that seems to be hunting them with deliberate patience.</string>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--               CREEPYPASTAS                  -->
+    <!-- ═══════════════════════════════════════════ -->
+
+    <string name="horror_media26_title">The SCP Foundation</string>
+    <string name="horror_media26_description">Collaborative Horror | The SCP Foundation is a fictional secret organization that catalogues, contains, and studies thousands of anomalous entities, objects, and locations — each assigned a number and a containment procedure. Written in the dry, detached prose of bureaucratic incident reports, every entry is its own self-contained horror story, ranging from philosophical terror to cosmic dread to quiet heartbreak. What began as a single forum post in 2007 has grown into the internet\'s largest and most sophisticated shared horror universe, with thousands of contributors building a mythology of incomprehensible scale.</string>
+
+    <string name="horror_media27_title">The Russian Sleep Experiment</string>
+    <string name="horror_media27_description">Experimental Horror | Near the end of World War II, Soviet researchers seal five political prisoners in a hermetically sealed chamber with an experimental stimulant gas designed to keep them awake indefinitely. For the first days, the subjects communicate normally. Then the silence begins. When researchers finally open the chamber after 30 days, what greets them defies every assumption about the limits of human endurance and the nature of the human mind. One of the most widely shared horror stories in internet history, the tale derives its power from the clinical calm of its narration and the escalating wrongness of what is described inside.</string>
+
+    <string name="horror_media28_title">NoEnd House</string>
+    <string name="horror_media28_description">Psychological Horror | A man hears rumors of a haunted house with nine rooms, each worse than the last, that supposedly no one has ever survived to completion — with a $500 prize waiting for anyone who does. He decides to try. The first rooms are disorienting. The middle rooms are disturbing. By the final rooms, the concept of reality itself has ceased to function in any recognizable way, and the man begins to understand that the house is not merely a series of scares, but something that fundamentally alters what it means to perceive the world around you.</string>
+
+    <string name="horror_media29_title">Candle Cove</string>
+    <string name="horror_media29_description">Psychological Horror | A message board thread fills with adults sharing warm, nostalgic memories of a strange children\'s television program they all watched as kids — Candle Cove, featuring a young girl named Janice, puppet pirates, and a screaming, hollow villain called the Skin-Taker. The recollections grow stranger as users compare notes: the episodes were deeply unsettling, the characters threatening, the imagery wrong for a children\'s show. The thread ends with a single reply from one user\'s mother that recontextualizes everything — and makes the childhood memories far more disturbing than any monster could.</string>
+
+    <string name="horror_media30_title">Slender Man</string>
+    <string name="horror_media30_description">Paranormal Horror | Slender Man is a tall, impossibly thin, faceless figure dressed in a black suit who stalks and abducts children in wooded areas — often appearing in the background of photographs, just barely visible. Born from a 2009 photo-editing contest on the Something Awful forums, the character spread virally across the internet and became one of the first pieces of digital folklore to develop a genuine mythology, spawning hundreds of stories, videos, and ARGs. The Slender Man phenomenon is a landmark in the history of collective internet horror — a myth that grew far beyond its origins and, in 2014, crossed into the real world in deeply unsettling ways.</string>
+
 
 </resources>
