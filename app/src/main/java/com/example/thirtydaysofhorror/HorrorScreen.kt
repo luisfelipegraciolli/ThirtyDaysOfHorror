@@ -33,6 +33,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.getValue
@@ -47,6 +49,23 @@ import androidx.compose.ui.text.style.TextAlign
 import com.example.thirtydaysofhorror.model.HorrorMedia
 import com.example.thirtydaysofhorror.ui.theme.ThirtyDaysOfHorrorTheme
 
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun TDOHTopBar(modifier: Modifier = Modifier){
+    CenterAlignedTopAppBar(
+        title = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = "${stringResource(R.string.app_name)} \uD83C\uDF83",
+                    style = MaterialTheme.typography.headlineMedium,
+                    textAlign = TextAlign.Center
+                )
+            }
+        },
+        modifier = modifier.padding(16.dp)
+    )
+}
 
 @Composable
 private fun MediaItemButton(expanded: Boolean, onClick: () -> (Unit), modifier: Modifier = Modifier){
