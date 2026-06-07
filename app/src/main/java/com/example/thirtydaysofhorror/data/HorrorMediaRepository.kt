@@ -1,6 +1,7 @@
-package com.example.thirtydaysofhorror.model
+package com.example.thirtydaysofhorror.data
 
 import com.example.thirtydaysofhorror.R
+import com.example.thirtydaysofhorror.model.HorrorMedia
 
 object HorrorMediaRepository {
     val horrorGoodies: List<HorrorMedia> = listOf(
@@ -136,7 +137,7 @@ object HorrorMediaRepository {
         ),
         HorrorMedia(
             titleStringId = R.string.horror_media22_title,
-                imageResId = R.drawable.twin_peaks_cover,
+            imageResId = R.drawable.twin_peaks_cover,
             descriptionStringId = R.string.horror_media22_description
         ),
         HorrorMedia(

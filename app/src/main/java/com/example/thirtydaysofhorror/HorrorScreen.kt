@@ -45,7 +45,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import com.example.thirtydaysofhorror.model.HorrorMedia
-import com.example.thirtydaysofhorror.model.HorrorMediaRepository
 import com.example.thirtydaysofhorror.ui.theme.ThirtyDaysOfHorrorTheme
 
 
@@ -162,23 +161,3 @@ fun HorrorFeed(horrorList: List<HorrorMedia>, modifier: Modifier = Modifier){
     }
 }
 
-
-@Preview(showBackground = true)
-@Composable
-fun DarkThemePreview(){
-    ThirtyDaysOfHorrorTheme(darkTheme = true) {
-        Scaffold { innerPadding ->
-            HorrorFeed(horrorList = HorrorMediaRepository.horrorGoodies, modifier = Modifier.padding(innerPadding))
-        }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun LightThemePreview(){
-    ThirtyDaysOfHorrorTheme(darkTheme = false) {
-        Scaffold { innerPadding ->
-            HorrorFeed(horrorList = HorrorMediaRepository.horrorGoodies, modifier = Modifier.padding(innerPadding))
-        }
-    }
-}
